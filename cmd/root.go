@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"embed"
 	"fmt"
 	"os"
 
@@ -9,8 +8,6 @@ import (
 )
 
 var (
-	//go:embed README.md
-	readmeFS embed.FS
 	docsFlag bool
 	RootCmd  = &cobra.Command{
 		Use:   "gitzy",

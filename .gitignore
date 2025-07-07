@@ -3,9 +3,12 @@
 *.dll
 *.so
 *.dylib
+gitzy*
+
 
 # Output folders
 /bin/
+/site/
 
 # Go build cache
 /pkg/

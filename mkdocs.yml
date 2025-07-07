@@ -10,3 +10,4 @@ nav:
       - Switch: cli/gitzy_switch.md
       - List: cli/gitzy_list.md
       - Wipe: cli/gitzy_wipe.md
+  - Installation Guide: install.md

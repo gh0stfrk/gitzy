@@ -21,14 +21,6 @@ gitzy wipe work
 
 See `gitzy doctor --docs` for troubleshooting.
 
-## Examples
-
-![Switching Profile](docs/switching.gif)
-
-![Add Profile](docs/add-profile.gif)
-
-See [docs/](docs/) for usage gifs.
-
 ## CLI Reference
 
 Auto-generated CLI documentation is available in [docs/cli/](docs/cli/).

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://gh0stfrk.github.io/gitzy/</loc>
+         <lastmod>2025-07-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gh0stfrk.github.io/gitzy/cli/gitzy/</loc>
+         <lastmod>2025-07-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gh0stfrk.github.io/gitzy/cli/gitzy_add/</loc>
+         <lastmod>2025-07-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gh0stfrk.github.io/gitzy/cli/gitzy_doctor/</loc>
+         <lastmod>2025-07-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gh0stfrk.github.io/gitzy/cli/gitzy_list/</loc>
+         <lastmod>2025-07-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gh0stfrk.github.io/gitzy/cli/gitzy_switch/</loc>
+         <lastmod>2025-07-07</lastmod>
+    </url>
+    <url>
+         <loc>https://gh0stfrk.github.io/gitzy/cli/gitzy_wipe/</loc>
+         <lastmod>2025-07-07</lastmod>
+    </url>
+</urlset>

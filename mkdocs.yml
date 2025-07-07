@@ -1,0 +1,12 @@
+site_name: gitzy CLI
+site_url: https://gh0stfrk.github.io/gitzy/
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - CLI Reference:
+      - Overview: cli/gitzy.md
+      - Add: cli/gitzy_add.md
+      - Switch: cli/gitzy_switch.md
+      - List: cli/gitzy_list.md
+      - Wipe: cli/gitzy_wipe.md

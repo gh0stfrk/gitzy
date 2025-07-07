@@ -1,0 +1,12 @@
+#!/bin/sh
+# Pre-commit hook: auto-generate CLI docs before every commit
+
+# Run the doc generator
+# (Assumes you have Go and dependencies installed)
+echo "[pre-commit] Generating CLI docs..."
+go run -tags tools ./tools/gendocs.go || {
+  echo "[pre-commit] Failed to generate CLI docs. Commit aborted." >&2
+  exit 1
+}
+
+git add docs/cli/

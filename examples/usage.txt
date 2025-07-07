@@ -1,0 +1,4 @@
+$ gitzy add work
+$ gitzy switch work
+$ gitzy list
+$ gitzy wipe work

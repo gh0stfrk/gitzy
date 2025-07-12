@@ -21,9 +21,9 @@ release:
 	rm -rf dist && mkdir -p dist/windows dist/linux dist/darwin
 
 	# Build binaries into platform-specific subdirs with consistent names
-	GOOS=windows GOARCH=amd64 go build -o dist/windows/gitzy.exe ./cmd
-	GOOS=linux   GOARCH=amd64 go build -o dist/linux/gitzy ./cmd
-	GOOS=darwin  GOARCH=amd64 go build -o dist/darwin/gitzy ./cmd
+	GOOS=windows GOARCH=amd64 go build -o dist/windows/gitzy.exe .
+	GOOS=linux   GOARCH=amd64 go build -o dist/linux/gitzy .
+	GOOS=darwin  GOARCH=amd64 go build -o dist/darwin/gitzy .
 
 	# Copy install scripts into respective folders
 	cp scripts/install_windows.bat dist/windows/

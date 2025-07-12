@@ -18,23 +18,18 @@ staticcheck:
 	staticcheck ./...
 
 release:
-	rm -rf dist && mkdir dist
+	rm -rf dist && mkdir -p dist/windows dist/linux dist/darwin
 
-	# Build binaries for all platforms
-	GOOS=windows GOARCH=amd64 go build -o dist/gitzy-windows-amd64.exe ./cmd
-	GOOS=linux   GOARCH=amd64 go build -o dist/gitzy-linux-amd64 ./cmd
-	GOOS=darwin  GOARCH=amd64 go build -o dist/gitzy-darwin-amd64 ./cmd
+	# Build binaries into platform-specific subdirs with consistent names
+	GOOS=windows GOARCH=amd64 go build -o dist/windows/gitzy.exe ./cmd
+	GOOS=linux   GOARCH=amd64 go build -o dist/linux/gitzy ./cmd
+	GOOS=darwin  GOARCH=amd64 go build -o dist/darwin/gitzy ./cmd
 
-	# Copy install scripts into dist
-	cp scripts/install_windows.bat dist/
-	cp scripts/install_linux.sh dist/
+	# Copy install scripts into respective folders
+	cp scripts/install_windows.bat dist/windows/
+	cp scripts/install_linux.sh dist/linux/
 
-	# Enter dist directory and package everything
-	# Using semicolon instead of separate lines to keep within same shell
-	cd dist; \
-	zip gitzy-windows-amd64.zip gitzy-windows-amd64.exe install_windows.bat && \
-	sha256sum gitzy-windows-amd64.zip > gitzy-windows-amd64.zip.sha256 && \
-	zip gitzy-linux-amd64.zip gitzy-linux-amd64 install_linux.sh && \
-	sha256sum gitzy-linux-amd64.zip > gitzy-linux-amd64.zip.sha256 && \
-	zip gitzy-darwin-amd64.zip gitzy-darwin-amd64 && \
-	sha256sum gitzy-darwin-amd64.zip > gitzy-darwin-amd64.zip.sha256
+	# Zip and checksum each platform's build
+	cd dist/windows && zip gitzy-windows-amd64.zip gitzy.exe install_windows.bat && sha256sum gitzy-windows-amd64.zip > gitzy-windows-amd64.zip.sha256
+	cd dist/linux   && zip gitzy-linux-amd64.zip gitzy install_linux.sh       && sha256sum gitzy-linux-amd64.zip   > gitzy-linux-amd64.zip.sha256
+	cd dist/darwin  && zip gitzy-darwin-amd64.zip gitzy                       && sha256sum gitzy-darwin-amd64.zip  > gitzy-darwin-amd64.zip.sha256

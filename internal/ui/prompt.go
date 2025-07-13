@@ -45,7 +45,12 @@ func AddProfileFlow(profileName string) error {
 	} else {
 		os.WriteFile(gitconfigPath, []byte(fmt.Sprintf("[user]\n\tname = %s\n\temail = %s\n[credential]\n\thelper = store", userName, userEmail)), 0600)
 	}
-	os.WriteFile(credsPath, []byte(token), 0600)
+	if token != "" {
+		credLine := fmt.Sprintf("https://%s:%s@github.com\n", userName, token)
+		os.WriteFile(credsPath, []byte(credLine), 0600)
+	} else {
+		os.WriteFile(credsPath, []byte(""), 0600)
+	}
 	gitSHA, _ := git.HashFile(gitconfigPath)
 	credsSHA, _ := git.HashFile(credsPath)
 	idx.Profiles[profileName] = &git.Profile{

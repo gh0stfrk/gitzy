@@ -25,8 +25,9 @@ Gitzy is a cross-platform CLI tool for switching between multiple Git credential
    - Right-click the ZIP file and choose **Extract All**.
 
 2. **Run the Installer**:
-   - Inside the extracted folder, double-click `install_windows.bat`.
-   - This will copy `gitzy.exe` to a directory in your system `PATH`.
+   - Inside the extracted folder, right-click and select "Open PowerShell window here"
+   - Run: `.\install_windows.ps1`
+   - This will copy `gitzy.exe` to a directory in your user `PATH`
 
 3. **Verify Installation**:
    Open **Command Prompt** and run:

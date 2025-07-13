@@ -29,9 +29,9 @@ gitzy is a cross-platform command-line tool for managing and switching between m
 3. Extract and install:
 
 #### 🪟 Windows
-```cmd
-# Extract the ZIP file and run as Administrator:
-install_windows.bat
+```powershell
+# Extract the ZIP file and run in PowerShell:
+.\install_windows.ps1
 ```
 
 #### 🐧 Linux

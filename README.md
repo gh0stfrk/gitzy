@@ -36,7 +36,7 @@ Gitzy is a cross-platform CLI tool that helps developers manage multiple GitHub 
    - **Linux**: `gitzy-linux-amd64.zip`
    - **macOS**: `gitzy-darwin-amd64.zip`
 3. Extract the archive and run the included install script:
-   - **Windows**: Run `install_windows.bat` as Administrator
+   - **Windows**: Run `install_windows.ps1` in PowerShell
    - **Linux/macOS**: Run `chmod +x install_linux.sh && ./install_linux.sh`
 
 ### Option 2: Install with Go

@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 	"os"
+	"os/exec"
 
 	"github.com/gh0stfrk/gitzy/internal/ui"
 	"github.com/spf13/cobra"
@@ -27,6 +28,14 @@ Security note: The token is stored unencrypted. See GitHub token best practices.
 	Args: cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		profileName := args[0]
+
+		// Check if Git is installed
+		if _, err := exec.LookPath("git"); err != nil {
+			fmt.Fprintln(os.Stderr, "❌ Git is not installed or not found in PATH.")
+			os.Exit(1)
+		}
+
+		// Proceed with profile addition
 		if err := ui.AddProfileFlow(profileName); err != nil {
 			fmt.Fprintf(os.Stderr, "Failed to add profile: %v\n", err)
 			os.Exit(1)

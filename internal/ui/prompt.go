@@ -43,7 +43,7 @@ func AddProfileFlow(profileName string) error {
 			os.WriteFile(gitconfigPath, data, 0600)
 		}
 	} else {
-		os.WriteFile(gitconfigPath, []byte(fmt.Sprintf("[user]\n\tname = %s\n\temail = %s\n[credential]\n\thelper = store", userName, userEmail)), 0600)
+		os.WriteFile(gitconfigPath, []byte(fmt.Sprintf("[user]\n\tname = %s\n\temail = %s\n[credential]\n\thelper = \n\thelper = store", userName, userEmail)), 0600)
 	}
 	if token != "" {
 		credLine := fmt.Sprintf("https://%s:%s@github.com\n", userName, token)

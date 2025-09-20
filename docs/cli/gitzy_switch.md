@@ -1,42 +1,41 @@
-## gitzy switch
 
-Switch to a different GitHub profile
-
-### Synopsis
+# gitzy switch
 
 Switch to a different GitHub profile.
 
-This command will backup your current ~/.gitconfig and ~/.git-credentials, then replace them with the files from the selected profile.
+---
 
-Backups are stored in ~/.gitzy/backups/<timestamp>/ for safety.
+## Usage
 
-```
+```bash
 gitzy switch <profile> [flags]
 ```
 
-### Examples
+This command backs up your current `~/.gitconfig` and `~/.git-credentials`, then replaces them with the files from the selected profile. Backups are stored in `~/.gitzy/backups/<timestamp>/` for safety.
 
-```
+---
 
-  # Switch to the work profile
+## Examples
+
+- Switch to the work profile:
+  ```bash
   gitzy switch work
-
-  # Switch to the personal profile
+  ```
+- Switch to the personal profile:
+  ```bash
   gitzy switch personal
+  ```
 
-```
+---
 
-### Options
+## Options
 
-```
-  -h, --help   help for switch
-```
+- `-h, --help`   Show help for switch
+- `--docs`       Show embedded documentation
 
-### Options inherited from parent commands
+---
 
-```
-      --docs   Show embedded documentation
-```
+For troubleshooting or restoring backups, see [gitzy doctor](gitzy_doctor.md).
 
 ### SEE ALSO
 

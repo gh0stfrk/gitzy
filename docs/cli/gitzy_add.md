@@ -1,43 +1,41 @@
-## gitzy add
 
-Add a new GitHub profile
+# gitzy add
 
-### Synopsis
+Add a new GitHub profile to Gitzy.
 
-Add a new GitHub profile to gitzy.
+---
 
-This command will interactively prompt you for user.name, user.email, and a GitHub token.
-It will store these in a new profile directory and optionally switch to it immediately.
+## Usage
 
-Security note: The token is stored unencrypted. See GitHub token best practices.
-
-```
+```bash
 gitzy add <profile> [flags]
 ```
 
-### Examples
+This command interactively prompts for your Git user.name, user.email, and a GitHub token. The new profile is stored in your configuration directory and can be switched to immediately.
 
-```
+---
 
-  # Add a new work profile
+## Examples
+
+- Add a new work profile:
+  ```bash
   gitzy add work
-
-  # Add a personal profile
+  ```
+- Add a personal profile:
+  ```bash
   gitzy add personal
+  ```
 
-```
+---
 
-### Options
+## Options
 
-```
-  -h, --help   help for add
-```
+- `-h, --help`   Show help for add
+- `--docs`       Show embedded documentation
 
-### Options inherited from parent commands
+---
 
-```
-      --docs   Show embedded documentation
-```
+**Security Note:** Tokens are stored unencrypted. Use minimal scopes and see [GitHub token best practices](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 ### SEE ALSO
 

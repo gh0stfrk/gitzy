@@ -1,43 +1,42 @@
-## gitzy list
 
-List available profiles and show the active one
+# gitzy list
 
-### Synopsis
+List available profiles and show the active one.
 
-List all available gitzy profiles and indicate which one is currently active.
+---
 
-The active profile is detected by comparing the hashes of your current ~/.gitconfig and ~/.git-credentials with those stored in your profiles.
+## Usage
 
-```
+```bash
 gitzy list [flags]
 ```
 
-### Examples
+Lists all available Gitzy profiles and indicates which one is currently active. The active profile is detected by comparing your current `~/.gitconfig` and `~/.git-credentials` with those stored in your profiles.
 
-```
+---
 
-  # List all profiles
+## Examples
+
+- List all profiles:
+  ```bash
   gitzy list
-
-  # List all profiles in JSON format
+  ```
+- List all profiles in JSON format:
+  ```bash
   gitzy list --json
+  ```
 
-```
+---
 
-### Options
+## Options
 
-```
-  -h, --help   help for list
-      --json   Output as JSON
-```
+- `-h, --help`   Show help for list
+- `--json`       Output as JSON
+- `--docs`       Show embedded documentation
 
-### Options inherited from parent commands
+---
 
-```
-      --docs   Show embedded documentation
-```
-
-### SEE ALSO
+For more details on profiles and configuration, see the [main documentation](../index.md).
 
 * [gitzy](gitzy.md)	 - Manage multiple GitHub identities and switch between them easily.
 

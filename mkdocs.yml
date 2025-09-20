@@ -3,7 +3,7 @@ site_url: https://gh0stfrk.github.io/gitzy/
 theme:
   name: material
 nav:
-  - Home: index.md
+  - gitzy: index.md
   - CLI Reference:
       - Overview: cli/gitzy.md
       - Add: cli/gitzy_add.md
